@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "javac",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [
+                "${input:fileName}.java",
+            ]
+        },
+        {
+            
+            "label": "Run",
+            "type": "shell",
+            "command": "java",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [
+                "${input:fileName}"
+            ]
+        }
+        
+
+    ],
+    "inputs": [
+        {
+            "id": "fileName",
+            "description": "Enter file name",
+            "default": "Enter a file",
+            "type": "promptString"
+        }
+    ]
+}
