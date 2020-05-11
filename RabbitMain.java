@@ -7,6 +7,8 @@ public class RabbitMain
         int[][] path = new int[3][3];
 
         initializePath(path);
+
+        path[0][0] = 1;
     }
 
     public static void initializePath(int path[][])
