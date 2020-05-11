@@ -4,9 +4,15 @@ public class RabbitMain
     {
         
         Rabbit cottonEyeJoe = new Rabbit(0,0,0);
-        String[][] path = {0,0,0};
+        int[][] path = new int[3][3];
 
-        
+        initializePath(path);
+    }
 
+    public static void initializePath(int path[][])
+    {
+        for(int i = 0; i < path.length; i++)
+            for(int j = 0; j < path[i].length; j++)
+                path[i][j] = 0;
     }
 }
