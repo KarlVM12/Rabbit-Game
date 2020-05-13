@@ -8,7 +8,6 @@ public class RabbitMain
 
         initializePath(path);
 
-        path[0][0] = 1;
     }
 
     public static void initializePath(int path[][])
@@ -17,4 +16,10 @@ public class RabbitMain
             for(int j = 0; j < path[i].length; j++)
                 path[i][j] = 0;
     }
+    
+    public static void setOneBlockOnPath(int path[][], int row, int column)
+    {
+        path[row][column] = 1;
+    }
+
 }
